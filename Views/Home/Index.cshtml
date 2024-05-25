@@ -1,8 +1,67 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "SillyConValley Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .jumbotron {
+            background-color: #007bff;
+            color: #fff;
+            padding: 100px 20px;
+            border-radius: 0;
+        }
+        .jumbotron h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .jumbotron p {
+            font-size: 1.5rem;
+        }
+        .jumbotron a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome to SillyConValley</h1>
+        <p class="lead">Explore the latest innovations and technologies with us.</p>
+        <p>Learn more about us <a href="#" class="font-weight-bold">here</a>.</p>
+    </div>
 </div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 SillyConValley. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
