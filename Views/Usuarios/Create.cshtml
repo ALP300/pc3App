@@ -2,6 +2,42 @@
     ViewData["Title"] = "Crear Usuario";
 }
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card-header {
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+        }
+        .alert {
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -35,6 +71,12 @@
     </div>
 </div>
 
+<footer>
+    <div class="container">
+        <p>&copy; 2024 SillyConValley. All rights reserved.</p>
+    </div>
+</footer>
+
 @section Scripts {
     <script>
         // Ocultar el mensaje de éxito después de 3 segundos
@@ -43,3 +85,6 @@
         }, 3000);
     </script>
 }
+
+</body>
+</html>

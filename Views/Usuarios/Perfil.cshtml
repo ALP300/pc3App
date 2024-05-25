@@ -4,32 +4,95 @@
     ViewData["Title"] = "Perfil de Usuario";
 }
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .profile-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: #343a40;
+        }
+        img {
+            border: 5px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
 <div class="container">
-    <h1 class="mt-4 mb-3">Perfil de @Model.Nombre @Model.Apellido</h1>
+    <div class="profile-box p-4">
+        <h1 class="mt-4 mb-3 text-center">Perfil de @Model.Nombre @Model.Apellido</h1>
 
-    <div class="row">
-        <div class="col-md-4">
-            <img src="@Model.Avatar" alt="Avatar" class="img-fluid rounded-circle mb-3" style="max-width: 200px;" />
+        <div class="row">
+            <div class="col-md-4">
+                <img src="@Model.Avatar" alt="Avatar" class="img-fluid mb-3" style="max-width: 200px;" />
+            </div>
+            <div class="col-md-8">
+                <h2>Información del Usuario</h2>
+                <dl class="row">
+                    <dt class="col-sm-3">ID</dt>
+                    <dd class="col-sm-9">@Model.Id</dd>
+
+                    <dt class="col-sm-3">Email</dt>
+                    <dd class="col-sm-9">@Model.Email</dd>
+
+                    <dt class="col-sm-3">Nombre</dt>
+                    <dd class="col-sm-9">@Model.Nombre</dd>
+
+                    <dt class="col-sm-3">Apellido</dt>
+                    <dd class="col-sm-9">@Model.Apellido</dd>
+                </dl>
+            </div>
         </div>
-        <div class="col-md-8">
-            <h2>Información del Usuario</h2>
-            <dl class="row">
-                <dt class="col-sm-3">ID</dt>
-                <dd class="col-sm-9">@Model.Id</dd>
 
-                <dt class="col-sm-3">Email</dt>
-                <dd class="col-sm-9">@Model.Email</dd>
-
-                <dt class="col-sm-3">Nombre</dt>
-                <dd class="col-sm-9">@Model.Nombre</dd>
-
-                <dt class="col-sm-3">Apellido</dt>
-                <dd class="col-sm-9">@Model.Apellido</dd>
-            </dl>
+        <div class="mt-4">
+            <a href="@Url.Action("Index", "Usuarios")" class="btn btn-secondary">Volver a la lista de usuarios</a>
         </div>
-    </div>
-
-    <div class="mt-4">
-        <a href="@Url.Action("Index", "Usuarios")" class="btn btn-secondary">Volver a la lista de usuarios</a>
     </div>
 </div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 SillyConValley. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
