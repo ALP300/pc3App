@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using pc3App.Data;
+using pc3App.Integration;
+using pc3App.Integration.jsonplaceholder;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,10 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<ListarUsuariosApiIntegration, ListarUsuariosApiIntegration>();
+builder.Services.AddScoped<ListarUsuarioApiIntegration, ListarUsuarioApiIntegration>();
+builder.Services.AddScoped<CrearUsuarioApiIntegration, CrearUsuarioApiIntegration>();
 
 var app = builder.Build();
 
